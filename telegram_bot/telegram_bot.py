@@ -12,13 +12,16 @@ HAFEZ_FALL_AGAIN = '📖 دوباره نیت کنید...'
 
 def user_information(update):
     # print("we are in user information")
-    user_id_get = update['message']['chat']['id']
+    chat_id = update.message.chat_id
+    username_get = 'ندارد'
+    first_name_get = 'ندارد'
+    last_name_get = 'ندارد'
     username_get = update['message']['chat']['username']
     first_name_get = update['message']['chat']['first_name']
     last_name_get = update['message']['chat']['last_name']
     requests.post('http://159.203.69.159:8000/setUserID/', json={"user_id": user_id_get, "username": username_get,
                                                                  "first_name": first_name_get,
-                                                                 "last_name": last_name_get}, )
+                                                                 "last_name": last_name_get})
 
 
 @csrf_exempt
