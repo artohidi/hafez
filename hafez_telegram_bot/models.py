@@ -7,9 +7,10 @@ class Hafez_Fall(models.Model):
     class Meta:
         verbose_name = "فال حافظ"
         verbose_name_plural = "فال حافظ"
-
+    number = models.CharField(max_length=5, blank=False, verbose_name="شماره غزل", default="0")
     text = models.TextField(blank=False, verbose_name="شعر")
     description = models.TextField(blank=False, verbose_name="تفسیر")
+    total_text = models.TextField(blank=False, verbose_name="متن کامل غزل", default="0")
 
     def __str__(self):
         return str(self.text)
