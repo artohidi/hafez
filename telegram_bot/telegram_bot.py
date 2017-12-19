@@ -78,7 +78,7 @@ def start(bot, update):
     user_information(update)
     # print("i am in start")
     bot.forwardMessage(chat_id=chat_id, from_chat_id="82799717", message_id="1970")
-    bot.forwardMessage(chat_id=chat_id, from_chat_id="82799717", message_id="2128")
+    bot.forwardMessage(chat_id=chat_id, from_chat_id="79733373", message_id="5851")
     # bot.forward_message(chat_id, from_chat_id=update.message.chat_id, message_id=update.message.message_id)
 
 
